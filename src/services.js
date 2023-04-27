@@ -1,6 +1,7 @@
 import axios from 'axios';
+import config from './config';
 
-export const BASE_URL = 'https://localhost:7199';
+export const BASE_URL = config.apiServer;
 export const ENDPOINTS = {
     NUMBER: 'number',
     NAME: 'name',
