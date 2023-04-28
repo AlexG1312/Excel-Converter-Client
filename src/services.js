@@ -3,8 +3,8 @@ import config from './config';
 
 export const BASE_URL = config.apiServer;
 export const ENDPOINTS = {
-    NUMBER: 'number',
-    NAME: 'name',
+    TITLE_TO_NUMBER: 'number',
+    NUMBER_TO_TITLE: 'name',
 };
 
 export const createExcelAPIEndpoint = (endpoint) => {
@@ -15,5 +15,5 @@ export const createExcelAPIEndpoint = (endpoint) => {
     };
 };
 
-export const excelNumberAPI = createExcelAPIEndpoint(ENDPOINTS.NUMBER);
-export const excelNameAPI = createExcelAPIEndpoint(ENDPOINTS.NAME);
+export const excelNumberAPI = createExcelAPIEndpoint(ENDPOINTS.TITLE_TO_NUMBER);
+export const excelNameAPI = createExcelAPIEndpoint(ENDPOINTS.NUMBER_TO_TITLE);

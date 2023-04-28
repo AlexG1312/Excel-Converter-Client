@@ -4,12 +4,14 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import reducers from "./reducers";
+import { excelMiddleware } from './middlewares';
 
+const composeEnhancers = window.REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;
 
 export const store = createStore(
   reducers,
-  compose(
-    applyMiddleware(thunk),
+  composeEnhancers(
+    applyMiddleware(...excelMiddleware, thunk),
   )
 )
 function App() {
